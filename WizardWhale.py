@@ -23,7 +23,7 @@ bgRect = bgImage.get_rect()
 player = PlayerBall([width/2, height/2])
 
 balls = []
-balls += [Ball("images/Ball/ball.png", [4,5], [100, 125])]
+balls += [Ball("jelly fish/jelly fish.png", [4,5], [100, 125])]
 
 timer = Score([80, height - 25], "Time: ", 36)
 timerWait = 0
