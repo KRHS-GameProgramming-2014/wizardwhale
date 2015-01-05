@@ -90,6 +90,7 @@ while True:
 						  
 		if timerWait < timerWaitMax:
 			timerWait += 1
+			
 		if len(balls) < 10:
 			if random.randint(0, 1*60) == 0:
 				balls += [Ball("jelly fish/jelly fish.png",
@@ -98,7 +99,7 @@ while True:
 						  ]
 					
 		if timerWait < timerWaitMax:
-			timerWait += 1
+			timerWait += 5
 			
 		if len(balls) < 10:
 			if random.randint(0, 1*60) == 0:
@@ -108,7 +109,7 @@ while True:
 						  ]
 					
 		if timerWait < timerWaitMax:
-			timerWait += 1
+			timerWait += 10
 			
 		else:
 			timerWait = 0
