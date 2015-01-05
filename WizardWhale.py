@@ -27,7 +27,7 @@ balls += [Ball("jelly fish/jelly fish.png", [4,5], [100, 125])]
 
 timer = Score([80, height - 25], "Time: ", 36)
 timerWait = 0
-timerWaitMax = 6
+timerWaitMax = 20
 
 score = Score([width-80, height-25], "Score: ", 36)
 
@@ -90,6 +90,26 @@ while True:
 						  
 		if timerWait < timerWaitMax:
 			timerWait += 1
+		if len(balls) < 10:
+			if random.randint(0, 1*60) == 0:
+				balls += [Ball("jelly fish/jelly fish.png",
+						  [random.randint(0,10), random.randint(0,10)],
+						  [random.randint(100, width-100), random.randint(100, height-100)])
+						  ]
+					
+		if timerWait < timerWaitMax:
+			timerWait += 1
+			
+		if len(balls) < 10:
+			if random.randint(0, 1*60) == 0:
+				balls += [Ball("shark/shark.png",
+						  [random.randint(0,10), random.randint(0,10)],
+						  [random.randint(100, width-100), random.randint(100, height-100)])
+						  ]
+					
+		if timerWait < timerWaitMax:
+			timerWait += 1
+			
 		else:
 			timerWait = 0
 			timer.increaseScore(.1)
