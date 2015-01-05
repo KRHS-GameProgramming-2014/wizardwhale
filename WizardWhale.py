@@ -82,7 +82,7 @@ while True:
 					player.go("stop left")
 			
 		if len(balls) < 10:
-			if random.randint(0, 1*60) == 0:
+			if random.randint(0, 1*150) == 0:
 				balls += [Ball("puffer fish/puffer fish left.png",
 						  [random.randint(0,10), random.randint(0,10)],
 						  [random.randint(100, width-100), random.randint(100, height-100)])
@@ -92,7 +92,7 @@ while True:
 			timerWait += 1
 			
 		if len(balls) < 10:
-			if random.randint(0, 1*60) == 0:
+			if random.randint(0, 1*150) == 0:
 				balls += [Ball("jelly fish/jelly fish.png",
 						  [random.randint(0,10), random.randint(0,10)],
 						  [random.randint(100, width-100), random.randint(100, height-100)])
@@ -102,7 +102,7 @@ while True:
 			timerWait += 5
 			
 		if len(balls) < 10:
-			if random.randint(0, 1*60) == 0:
+			if random.randint(0, 1*150) == 0:
 				balls += [Ball("shark/shark.png",
 						  [random.randint(0,10), random.randint(0,10)],
 						  [random.randint(100, width-100), random.randint(100, height-100)])
