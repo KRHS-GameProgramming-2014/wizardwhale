@@ -17,7 +17,7 @@ bgColor = r,g,b = 0, 0, 0
 
 screen = pygame.display.set_mode(size)
 
-bgImage = pygame.image.load("images/Screens/Start Screen.png").convert()
+bgImage = pygame.image.load("images/Screens/Start Screen 3.png").convert()
 bgRect = bgImage.get_rect()
 
 player = PlayerBall([width/2, height/2])
@@ -33,7 +33,7 @@ score = Score([width-80, height-25], "Score: ", 36)
 
 run = False
 
-startButton = Button([width/2, height-300], 
+startButton = Button([width/2, height-180], 
 				     "images/Buttons/Start Base.png", 
 				     "images/Buttons/Start Clicked.png")
 
