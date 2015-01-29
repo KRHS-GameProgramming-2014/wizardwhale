@@ -10,4 +10,5 @@ class attacks():
 		self.place(pos)
 		self.didBounceX = False
 		self.didBounceY = False
-		self.radius = (int(self.rect.height/2.0 + self.rect.width/2.0)/2) - 1
+		self.radius = (int(self.rect.height/2.0 + self.rect.width/2.0)/2) - 1 
+
