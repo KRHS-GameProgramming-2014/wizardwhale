@@ -13,7 +13,7 @@ class attacks():
 		self.radius = (int(self.rect.height/2.0 + self.rect.width/2.0)/2) - 1 
 
 
-	def collideWall(self, width, height):
+    def collideWall(self, width, height):
 		if not self.didBounceX:
 			#print "trying to hit Wall"
 			if self.rect.left < 0 or self.rect.right > width:
@@ -25,3 +25,10 @@ class attacks():
 				self.speedy = 0
 				self.didBounceY = True
 				#print "hit xWall"
+                
+                
+    def collideZombie(self, other):
+		if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
+			if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
+				if (self.radius + other.radius) > self.distance(other.rect.center):
+					self.living = False
