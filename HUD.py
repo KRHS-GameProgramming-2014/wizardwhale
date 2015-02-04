@@ -21,7 +21,7 @@ class Text():
 		pass
 
 class Score(Text):
-	def __init__(self, pos, baseText = "Score: ", textSize = 12, textColor=(255,255,255), font = None):
+	def __init__(self, pos, baseText = "Mana: ", textSize = 12, textColor=(255,255,255), font = None):
 		self.score = 0
 		self.baseText = baseText
 		self.text = self.baseText + str(self.score)

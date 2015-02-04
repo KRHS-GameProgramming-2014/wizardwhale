@@ -1,9 +1,11 @@
 import pygame, sys, random
 from Ball import Ball
-from PlayerBall import PlayerBall
+from Player import Whale
 from HUD import Text
 from HUD import Score
 from Button import Button
+from Wall import Wall
+
 
 pygame.init()
 
@@ -20,7 +22,7 @@ screen = pygame.display.set_mode(size)
 bgImage = pygame.image.load("images/Screens/Start Screen 3.png").convert()
 bgRect = bgImage.get_rect()
 
-player = PlayerBall([width/2, height/2])
+player = Whale([width/2, height/2])
 
 balls = []
 balls += [Ball("jelly fish/jelly fish.png", [4,5], [100, 125])]
