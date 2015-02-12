@@ -135,6 +135,9 @@ while True:
         bgColor = r,g,b
         screen.fill(bgColor)
         screen.blit(bgImage, bgRect)
+        for projectile in projectiles:
+            screen.blit(spike.image,spike.rect)
+        
         for ball in balls:
             screen.blit(ball.image, ball.rect)
         screen.blit(player.image, player.rect)
