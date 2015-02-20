@@ -27,6 +27,8 @@ player = Whale([width/2, height/2])
 balls = []
 balls += [Ball("jelly fish/jelly fish.png", [4,5], [100, 125])]
 
+projectiles = []
+
 timer = Score([80, height - 25], "Time: ", 36)
 timerWait = 0
 timerWaitMax = 20
@@ -131,13 +133,14 @@ while True:
         for ball in balls:
             if not ball.living:
                 balls.remove(ball)
+                
+        
         
         bgColor = r,g,b
         screen.fill(bgColor)
         screen.blit(bgImage, bgRect)
         for projectile in projectiles:
             screen.blit(spike.image,spike.rect)
-        
         for ball in balls:
             screen.blit(ball.image, ball.rect)
         screen.blit(player.image, player.rect)
