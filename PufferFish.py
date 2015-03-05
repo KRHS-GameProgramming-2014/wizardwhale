@@ -1,6 +1,7 @@
 import pygame, math, random
 #from WizardWhale import EnemiesAttack
 from Spike import Spike
+
 class PufferFish():
     def __init__(self, speed = [0,0], pos = [0,0]):
         self.image = pygame.image.load("puffer fish\puffer fish left.png")
@@ -13,6 +14,7 @@ class PufferFish():
         self.didBounceY = False
         self.radius = (int(self.rect.height/2.0 + self.rect.width/2.0)/2) - 1
         self.living = True
+        self.kind = "Puffer Fish"
         
     def place(self, pos):
         self.rect.center = pos

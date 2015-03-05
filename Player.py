@@ -3,7 +3,7 @@ from Ball import Ball
 
 class Whale(Ball):
 	def __init__(self, pos):
-		Ball.__init__(self, "images/Player/pballbu.png", [0,0], pos)
+		Ball.__init__(self, "wizard/whale.png", [0,0], pos)
 		self.upImages = [pygame.image.load("wizard/whale.png")]
 		
 		self.downImages = [pygame.image.load("wizard/whale.png")]

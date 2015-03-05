@@ -5,7 +5,7 @@ from HUD import Text
 from HUD import Score
 from Button import Button
 from Wall import Wall
-
+from PufferFish import PufferFish
 
 pygame.init()
 
@@ -25,7 +25,6 @@ bgRect = bgImage.get_rect()
 player = Whale([width/2, height/2])
 
 balls = []
-balls += [Ball("jelly fish/jelly fish.png", [4,5], [100, 125])]
 
 projectiles = []
 
@@ -87,7 +86,7 @@ while True:
             
         if len(balls) < 10:
             if random.randint(0, 1*150) == 0:
-                balls += [Ball("puffer fish/puffer fish left.png",
+                balls += [PufferFish(
                           [random.randint(0,10), random.randint(0,10)],
                           [random.randint(100, width-100), random.randint(100, height-100)])
                           ]
@@ -122,13 +121,19 @@ while True:
         timer.update()
         score.update()
         for ball in balls:
-            ball.update(width, height)
-            
+            if ball.kind == "Puffer Fish":
+                projectiles += ball.update(width, height, player)
+            else:
+                ball.update(width, height)
+        
+
+        
         for bully in balls:
             for victem in balls:
                 bully.collideBall(victem)
             if bully.collidePlayer(player):
                 score.increaseScore(1)
+        
         
         for ball in balls:
             if not ball.living:
@@ -140,7 +145,8 @@ while True:
         screen.fill(bgColor)
         screen.blit(bgImage, bgRect)
         for projectile in projectiles:
-            screen.blit(spike.image,spike.rect)
+            screen.blit(projectile.image,projectile.rect)
+            projectile.update(width, height)
         for ball in balls:
             screen.blit(ball.image, ball.rect)
         screen.blit(player.image, player.rect)
