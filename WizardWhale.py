@@ -6,6 +6,10 @@ from HUD import Score
 from Button import Button
 from Wall import Wall
 from PufferFish import PufferFish
+from Cloud import Cloud
+
+
+
 
 pygame.init()
 
