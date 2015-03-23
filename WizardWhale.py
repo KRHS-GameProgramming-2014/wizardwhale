@@ -143,6 +143,10 @@ while True:
             if not ball.living:
                 balls.remove(ball)
                 
+        for spike in projectiles:
+            if not spike.living:
+                projectiles.remove(spike)
+                
         
         
         bgColor = r,g,b
