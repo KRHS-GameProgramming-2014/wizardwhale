@@ -1,0 +1,1 @@
+a wizard that picks up mana to throw attacks and kill enemies with 3 lvls and 3 enemies
