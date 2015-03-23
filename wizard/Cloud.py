@@ -1,6 +1,6 @@
 import pygame, math
 
-class attacks():
+class Cloud():
     def __init__(self, image, speed = [0,0], pos = [0,0]):
 		self.image = pygame.image.load(image)
 		self.rect = self.image.get_rect()
@@ -27,8 +27,20 @@ class attacks():
 				#print "hit xWall"
                 
                 
-    def collideZombie(self, other):
+    def collideEnemy(self, other):
 		if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
 			if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
 				if (self.radius + other.radius) > self.distance(other.rect.center):
 					self.living = False
+                    
+class cloud(Ball):
+    def __init__(self, owner, direction):
+        if direction == "right":
+            speed = [3,0]
+        elif direction == "left":
+            speed = [-3,0]
+        elif direction == "up":
+            speed = [0,-3]
+        elif direction == "down":
+            speed = [0,3]
+        Ball.__init__(self, "whale atack cloud.png", speed, owner.rect.center)

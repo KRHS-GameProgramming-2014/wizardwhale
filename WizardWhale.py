@@ -6,6 +6,10 @@ from HUD import Score
 from Button import Button
 from Wall import Wall
 from PufferFish import PufferFish
+from Cloud import Cloud
+
+
+
 
 pygame.init()
 
@@ -138,11 +142,11 @@ while True:
         for ball in balls:
             if not ball.living:
                 balls.remove(ball)
-        
+                
         for spike in projectiles:
-            if self.living = True:
-            if self.living = False:
+            if not spike.living:
                 projectiles.remove(spike)
+                
         
         
         bgColor = r,g,b
