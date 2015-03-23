@@ -138,15 +138,19 @@ while True:
         for ball in balls:
             if not ball.living:
                 balls.remove(ball)
-                
+        
+        for spike in projectiles:
+            if self.living = True:
+            if self.living = False:
+                projectiles.remove(spike)
         
         
         bgColor = r,g,b
         screen.fill(bgColor)
         screen.blit(bgImage, bgRect)
-        for projectile in projectiles:
-            screen.blit(projectile.image,projectile.rect)
-            projectile.update(width, height)
+        for Spike in projectiles:
+            screen.blit(Spike.image,Spike.rect)
+            Spike.update(width, height)
         for ball in balls:
             screen.blit(ball.image, ball.rect)
         screen.blit(player.image, player.rect)

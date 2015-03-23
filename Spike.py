@@ -14,11 +14,13 @@ class Spike(Ball):
 
     def collideWall(self, width, height):
         if not self.didBounceX:
+            self.living = True
             #print "trying to hit Wall"
             if self.rect.left < 0 or self.rect.right > width:
                 self.living = False
-                #print "hit xWall"
+            #print "hit xWall"
         if not self.didBounceY:
+            self.living = True            
             if self.rect.top < 0 or self.rect.bottom > height:
                 self.living = False
-                #print "hit xWall"
+             #print "hit xWall"
